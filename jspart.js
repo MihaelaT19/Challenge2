@@ -31,7 +31,7 @@ function divMaker(text){
   })
 
   flashcards.appendChild(div);
-  
+
 
 }
 function addFlashcards(){
