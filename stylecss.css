@@ -80,7 +80,7 @@ button:hover{
     padding: 0 10px;
 }
 
-.flashcards{
+.flashcard{
     width: 370px;
     height: 200px;
     word-wrap: break-word;
@@ -89,7 +89,7 @@ button:hover{
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
-.flashcards h2{
+.flashcard h2{
     font-size: 1rem;
 }
 
