@@ -1,12 +1,12 @@
 const flashcards= document.getElementByClassName("flashcards")[0];
-const creatBox= document.getElementByClassName("creatBox")[0];
+const createBox= document.getElementByClassName("create-box")[0];
 const qusetion=document.getElementById("qusetion");
 const answer=document.getElementById("answer");
-let contentArray= localStorage.getItem('items')?JSON.parse(localStorage.getItem('items')):[];
+let contentArray= localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')):[];
 
 contentArray.forEach(divMaker);
 function divMaker(text){
-  var viv= document.createElement("div");
+  var div= document.createElement("div");
   var h2_question= document.createElement("h2");
   var h2_answer= document.createElement("h2");
 
@@ -26,7 +26,7 @@ function divMaker(text){
   div.addEventListener("click", function(){
       if(h2_answer.style.display=="none")
         h2_answer.style.display="block";
-       else
+      else
          h2_answer.style.display="none";
   })
 
@@ -34,14 +34,15 @@ function divMaker(text){
 
 
 }
-function addFlashcards(){
-  /*dictionar*/ var flashcards_info={
-   'my_qusetion': qusetion.value, 'my_answer':answer.value
+function addFlashcard(){
+  /*dictionar*/ var flashcard_info={
+   'my_question': question.value,
+   'my_answer':answer.value
    }
 
-   contentArray.push(flashcards_info);
+   contentArray.push(flashcard_info);
   /*key*/ localStorage.setItem('items', JSON.stringify(contentArray));
-  divMaker(contentArray[contentArray.lenght-1]);
+  divMaker(contentArray[contentArray.length-1]);
   question.value='';
   answer.value='';
 }
@@ -52,10 +53,10 @@ localStorage.clear();
 flashcards.innerHTML='';//empty string
 contentArray=[];
 }
-function showCreateBox(){
-   creatBox.style.display="block";
+function showCreateCardBox(){
+   createBox.style.display="block";
 }
 
 function hideCreateBox(){
-  creatBox.style.display="none";
+  createBox.style.display="none";
 }
