@@ -9,7 +9,7 @@
 body{
     font-family: 'Fruktur', cursive;
     font-size: 1rem;
-    background-color: antiquewhite;
+    background-color: #b06d11;
 }
 
 header
@@ -94,10 +94,10 @@ button:hover{
 }
 
 @media (max-width: 768px) {
- .flashcards{
+ .flashcard{
      margin: auto;
  }
-    .flashcards{
+    .flashcard{
         margin-top: 10px;
         margin-bottom: 10px;
     }
@@ -111,7 +111,7 @@ button:hover{
     .create-box{
         width: 100%;
     }
-    .flashcards{
+    .flashcard{
         width: 100%;
     }
 }
